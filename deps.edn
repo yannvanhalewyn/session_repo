@@ -1,13 +1,10 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.12.0"}
-        io.github.humbleui/humbleui {:git/sha "a6f3c3c1e8e3c4d8e3f7c1e8e3c4d8e3f7c1e8e3"
-                                      :git/tag "1.19.0"}
-        io.github.humbleui/jwm {:mvn/version "0.4.15"}
-        io.github.humbleui/skija {:mvn/version "0.116.2"}}
+        io.github.humbleui/humbleui {:git/url "https://github.com/HumbleUI/HumbleUI"
+                                     :git/sha "edcdcd75959d8069a3b54e4f92b7a0ea04068661"}}
  :aliases
  {:dev {:extra-paths ["dev"]
-        :extra-deps {nrepl/nrepl {:mvn/version "1.3.0"}
-                     cider/cider-nrepl {:mvn/version "0.50.2"}}}
+        :extra-deps {}}
   :run {:main-opts ["-m" "session-repo.core"]}
   :uberjar {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.1.303"}}
             :exec-fn hf.depstar/uberjar

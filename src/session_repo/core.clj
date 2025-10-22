@@ -14,6 +14,7 @@
 (defonce *window (atom nil))
 
 (defn make-app []
+  #_
   (ui/dynamic _ [state @*state]
     (sui/main-view state)))
 
